@@ -515,3 +515,156 @@
 
 //              JAVASCRIPT THIS FUNCTIONS
 //              JAVASCRIPT .bind .call
+
+/*
+const cat = {
+    name: 'Blue';
+    breed: 'scottish fold';
+    dance: function(dance){
+        console.log(`mew I am ${this.name} and i enjoy ${dance}`);
+    }
+};
+
+const bluesDance = cat.dance (this is the exact same function)
+
+cat.dance('salsa');
+
+*/
+
+// when you call a function on nothing in javascript you actually just call it on the global object i.e. window
+
+// in browser JS thats window 
+// in NodeJS thats global
+
+//                  EMCA STRICT MODE
+
+//class Cat {
+//    constructor(name,breed){
+ //       this.name = name;
+// //       this.breed = breed;
+ //   }
+ //   dance(danceType){
+ //       console.log('this is', this);
+  //  }
+//}
+
+// BABEL IS A TRANSCRIOBER
+
+// sometimes you need to say "call this function on this object" that is what the function call() is used for 
+
+// call is used when you need to call an input to your current function and/or object
+
+//bind is when you pass in a value and is used when using THIS and it does not execute your function. 
+
+// bind returns a new perma-bound function
+
+//  const bDance = blue.dance;
+// const boundDance = bDance.bind(blue);
+
+// bind is a method on functions that returns a boundy copy of the function
+
+// const x = var.obj.bind(value, 'filler')
+
+// you can also bind arguments to functions. that will bake them into the function
+
+// const applyCASalesTax = applySalesTax.bind(null, 0.0725);
+
+// applyCASalesTax(50);
+
+// function collectMonthlyFee(fee){
+    // const remaining = this.total - fee;
+    //this.total = remaining;
+    //return this.name + 'remaining balance:' + remaining;
+//}
+
+//             ARROW FUNCTIONS AND THIS
+
+// arrow functions do not make their own this
+
+// const greeter = {
+    //msg : 'i like chickens',
+    // sayHi ; () => {
+        //alert(this.msg);
+    //},
+    // waitAndGreet : function(delay){
+        //setTimeout(function(){
+            //alert('hello!');
+        //}, delay)
+        
+
+  //  }
+//}
+                
+
+//                      WHAT IS JQUERY
+
+//  JQUERY IS A LIBRARY FOR:
+// Manipulating the DOM
+// Adding Event Listeners
+// animating Elements
+// Making HTTP Requests
+
+// ----------------- YOU DO NOT NEED TO LEARN JQUERY!------
+
+
+//                      HOW THE WEB WORKS!
+
+// A network is a set of computers that can intercommunicate
+
+// networks are made to share information
+
+// the internet is an example of a network
+
+// LAN is a local area network
+
+// An IP adress is a unique address that can be used to identify a specific computer on a network
+
+//Since IP address are just four numbers (0-255) we use hostnames instead. 
+
+// Hostnames are just nicknames for a server (human readable)
+// these are mapped into an IP address
+//DNS stands for Domain Name Systems
+
+// URL anatomy (universal resource locators)
+// URLs are not exclusive to webpages
+// a Query string provides extra information in search terms. multiple arguments are divided using \
+
+
+// a server is a computer that provides functionality.
+
+//A server is a computer program or device that provides a service to another computer program and its user, also known as the client. In a data center, the physical computer that a server program runs on is also frequently referred to as a server.
+
+//What is a REQUEST
+// the Method is GET
+// Http Protocol version always 1.1
+// resources URL that you want
+// Headers
+
+// response CODES!
+
+// 200 = ok
+// 301 = Your request is elsewhere
+// 404 = not found
+// 500 = server is having internal problems
+
+// ACcept-Language is a way to ask for a preticular language
+
+// ------------------------SETTING UP A SERVER-------------
+
+//Just opening up an HTML file in a browser uses the File Protocol not HTTP
+// some things will not work the same
+//it is useful to start a simple HTTP server for testing!
+
+// $python 3 -m http.server
+
+// GET vs Post 
+
+// GET: requests without side effects because it wont change server data
+// typically arguents are passed along in the query string
+
+// POST: requests with side effects because it can change the server data
+// arguments are sent as body of the request
+// some form submissions
+// always do this if there is a side effect, sending mail, charging a card
+
+//                            APIs 
