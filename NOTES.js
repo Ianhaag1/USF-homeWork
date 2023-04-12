@@ -1,3 +1,5 @@
+/*
+
 //alert("THIS FILE WORKS PROPERLY, IF THIS DOES NOT SHOW THIS FILE IS BROKE")
 //console.log("This Shows Its Working")
 
@@ -668,3 +670,145 @@ cat.dance('salsa');
 // always do this if there is a side effect, sending mail, charging a card
 
 //                            APIs 
+
+
+// DATA FORMATS:
+// APIs do not respond with HTML
+// HTML contains info for the page structure, APIs respond with data
+
+// They use different data formats like XML and JSON
+// HTTP IS TEXT BASED
+
+// JSON stands for JavaScript Object Notation
+// JSON keys must be DOUBLE QUOTED
+
+// CURL REQUESTS curl is used in command lines to transfer data
+
+// -------------------------AJAX----------------
+// Ajax is a web request
+// made from JavaScript in the browser
+// javascript make the request
+// XMLHttpRequest is an AJAX command 
+// its confusing as hell
+//axios is the better way to use AJAX but it is not NEEDED 
+// you can use the XMLHttp is you want to.
+// there is a newer version called FETCH
+// YOU WILL ALWAYS NEED AN API
+// YOU WILL (ALWAYS) NEED AN ENDPOINT
+
+// HTML CODE FOR AXIOUS
+// <script src="https://unpkg.com/axios/dist/axiois.js"><script>
+// always load the app.js after you do an axios command
+//axios.get(url) is a simple GET request for that URL
+
+//const response = axios.get('https://swapi.co/api/planets;)
+
+// a Promise is a placeholder for a future value
+
+/*const firstReq = new XMLHttpRequest();
+firstReq.addEventListener('load', function(){
+    const data = JSON.parse(this.responseText);
+    for (let planet of data.results){
+        console.log(planet.name)
+    }
+
+    const nextUrl = data.next;
+    const secondReq = new XMLHttpRequest();
+    secondReq,this.addEventListener('load', function (){
+        console.log("success!");
+        const data = JSON.parse(this.responseText);
+        for (let planet of data.results){
+            console.log(planet.name)
+        }
+    });
+
+    secondReq.addEventListener('error', function(){
+        console.log("ERROR")
+    });
+
+    secondReq.open('GET', nextUrl);
+    secondReq.send();
+    console.log("Sending 2nd Request")
+});
+
+firstReq.addEventListener('error', () => {
+
+})*/
+
+// Asynchronicity = AJAX request are asynchronous
+// axios.get() completes before the response is recieved 
+// this means that if we want to use the data we get back from our AJAX requests, we need to wait until the response has been given to us.
+
+
+// you want to use the async function 
+// you want to use the await function
+// this will make the value wait until a response happens from the API
+
+//async function getData(){
+//const response = await axios.get('https://google.com/search');
+//console.log("THIS IS THE LINE AFTER AXIOS.GET")
+//} 
+
+/*async function getData(){
+    const response = await axios.get('https://google.com');
+    for (let planet of response.data.results){
+        console.log(planet.name)
+    }
+}
+getData() */
+
+//----------------------MULTIPLE REQ WITH AJAX-------------------
+
+// to use another URL you can use the 'next' command which will then cycle to the next request in the order
+
+//ERROR HANDLING -- -- -- -- -- -- -- -- -- -- --
+
+/*async function getRandomDog(){
+    const res = await axios.get('httpsL//dog.ceo/api/breeds/image/random');
+    console.log(res.data)
+} 
+catch(error){
+    alert("ErrorFound")
+}
+*/
+
+// TO FIND AN ERROR USING AXIOS USE THE CATCH FUNCTION
+
+// catch(error){ALERT("theProblem")}
+
+// to make requests for query Params you can pass in the entire resourse?
+// but you can also pass in an object, this makes it easier
+
+/*async function getJoke(firstName,lastName){
+    let res = await axios.jet(`http://api.icndb.com/jokes/random`, {params: {firstName, lastName}})
+    console.log(res.data.value.joke)
+}
+
+getJoke("butters", "Steele")*/
+
+// AXIOS POST REQUESTS:
+// axios.post (url, [data,] [config])
+
+//                    python3
+
+// in python you want to write things in lower case camel
+// python3 
+// ipython3
+// neuralart
+// in python there are seperate types of intergers
+// python uses ' and " as delimiters
+// can also interpolate expressions using f-strings
+// in python you do not write blocks in {} curly braces
+// all that matters in python is the indentation 
+// if age >= 18
+//      print("please go vote")
+//      register_to_vote()
+
+
+// to run any python file you need to start with the command python3 insertfilehere
+
+// to run commands in ipython3 you want to use %run insertfilehere
+
+// condititonal logic in python is if elif(elseif) and else
+
+// tereny op
